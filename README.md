@@ -33,22 +33,36 @@
 
 [//]: # (* Click "Clean" to start drawing again)
 
-## Pre-trained model 
-Use MNIST dataset from Keras with CNN (Convolutional Neural Network)
-```python
-model = keras.Sequential([
-    keras.layers.Conv2D(32, (5, 5), padding="same", input_shape=[28, 28, 1]),
-    keras.layers.MaxPool2D((2,2)),
-    keras.layers.Conv2D(64, (5, 5), padding="same"),    
-    keras.layers.MaxPool2D((2,2)),    
-    keras.layers.Flatten(),   
-    keras.layers.Dense(1024, activation='relu'),    
-    keras.layers.Dropout(0.2),   
-    keras.layers.Dense(10, activation='softmax')
-])
+[//]: # (## Pre-trained model )
 
-model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-```
+[//]: # (Use MNIST dataset from Keras with CNN &#40;Convolutional Neural Network&#41;)
+
+[//]: # (```python)
+
+[//]: # (model = keras.Sequential&#40;[)
+
+[//]: # (    keras.layers.Conv2D&#40;32, &#40;5, 5&#41;, padding="same", input_shape=[28, 28, 1]&#41;,)
+
+[//]: # (    keras.layers.MaxPool2D&#40;&#40;2,2&#41;&#41;,)
+
+[//]: # (    keras.layers.Conv2D&#40;64, &#40;5, 5&#41;, padding="same"&#41;,    )
+
+[//]: # (    keras.layers.MaxPool2D&#40;&#40;2,2&#41;&#41;,    )
+
+[//]: # (    keras.layers.Flatten&#40;&#41;,   )
+
+[//]: # (    keras.layers.Dense&#40;1024, activation='relu'&#41;,    )
+
+[//]: # (    keras.layers.Dropout&#40;0.2&#41;,   )
+
+[//]: # (    keras.layers.Dense&#40;10, activation='softmax'&#41;)
+
+[//]: # (]&#41;)
+
+[//]: # ()
+[//]: # (model.compile&#40;optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy']&#41;)
+
+[//]: # (```)
 
 ## Library
 * [jquery](https://code.jquery.com/jquery-3.3.1.min.js) - JQuery

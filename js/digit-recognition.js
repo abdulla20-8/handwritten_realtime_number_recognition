@@ -3,8 +3,8 @@
 //-------------------
 let model;
 
-var canvasWidth           	= 150;
-var canvasHeight 			= 150;
+var canvasWidth           	= 400;
+var canvasHeight 			= 400;
 var canvasStrokeStyle		= "white";
 var canvasLineJoin			= "round";
 var canvasLineWidth       	= 10;
@@ -104,9 +104,9 @@ canvas.addEventListener("touchmove", function (e) {
 //-------------------
 // MOUSE UP function
 //-------------------
-$("#canvas").mouseup(function(e) {
-	drawing = false;
-});
+//$("#canvas").mouseup(function(e) {
+//	drawing = false;
+//});
 
 //---------------------
 // TOUCH END function
@@ -122,6 +122,21 @@ canvas.addEventListener("touchend", function (e) {
 // MOUSE LEAVE function
 //----------------------
 $("#canvas").mouseleave(function(e) {
+	drawing = false;
+});
+
+
+$("#canvas").mouseup(function(e) {
+    console.log("hi");
+    var button = document.getElementById("predict-button");
+    var clickEvent = new MouseEvent("click", {
+    "view": window,
+    "bubbles": true,
+    "cancelable": false
+});
+
+button.dispatchEvent(clickEvent);
+
 	drawing = false;
 });
 
